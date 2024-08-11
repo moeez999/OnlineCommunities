@@ -3,12 +3,12 @@ let menuButtonTwo = document.getElementById("user-menu-button");
 let menu = document.getElementById("mobile-menu");
 let menuTwo = document.getElementById("menu-two");
 
-menuButton.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
-});
-menuButtonTwo.addEventListener("click", () => {
-  menuTwo.classList.toggle("hidden-2");
-});
+// menuButton.addEventListener("click", () => {
+//   menu.classList.toggle("hidden");
+// });
+// menuButtonTwo.addEventListener("click", () => {
+//   menuTwo.classList.toggle("hidden-2");
+// });
 
 const cards = [
   {
@@ -197,16 +197,21 @@ document.getElementById("modal-close").addEventListener("click", () => {
 });
 
 let lastScrollTop = 0;
-const bottomMenu = document.getElementById("bottom-menu");
+const stickyMenu = document.getElementById("sticky-menu");
 
 window.addEventListener("scroll", function () {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop) {
+
+  if (scrollTop === 0) {
+    // At the top of the page
+    stickyMenu.classList.remove("-translate-y-full");
+  } else if (scrollTop > lastScrollTop) {
     // Scrolling down
-    bottomMenu.classList.remove("translate-y-full");
+    stickyMenu.classList.add("-translate-y-full");
   } else {
     // Scrolling up
-    bottomMenu.classList.add("translate-y-full");
+    stickyMenu.classList.remove("-translate-y-full");
   }
-  lastScrollTop = scrollTop;
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 });

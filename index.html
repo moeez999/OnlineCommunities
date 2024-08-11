@@ -14,14 +14,72 @@
     <title>Document</title>
   </head>
 
-  <body>
+  <body class="relative">
+    <!-- Menu -->
+    <div
+      id="sticky-menu"
+      class="fixed top-0 left-0 right-0 z-10 w-full sm:hidden flex justify-between px-2 py-2 lg:px-0 items-center gap-1 transition-transform duration-300 transform -translate-y-full bg-white shadow-lg"
+    >
+      <a href="#" class="text-custom-black text-sm flex items-center gap-2">
+        <img class="w-6" src="./assets/hamburger.png" alt="Menu" />
+      </a>
+      <a href="#" class="text-custom-black text-sm flex items-center gap-2">
+        <img class="w-6" src="./assets/home.png" alt="Home" />
+      </a>
+      <a href="#" class="text-custom-black text-sm ml-4">
+        <img class="w-6" src="./assets/search-normal.png" alt="Search" />
+      </a>
+      <a href="#" class="text-custom-black text-sm relative">
+        <img class="w-6" src="./assets/person.png" alt="Profile" />
+        <span
+          class="text-xs rounded-full bg-[#FE5F50] px-1 absolute top-[-0.25rem] right-[-0.25rem]"
+        >
+          5
+        </span>
+      </a>
+      <a href="#" class="text-custom-black text-sm">
+        <img class="w-6" src="./assets/sound.png" alt="Sound" />
+      </a>
+      <a href="#" class="text-custom-black text-sm">
+        <img class="w-6" src="./assets/shop.png" alt="Shop" />
+      </a>
+      <a href="#" class="text-custom-black text-sm relative">
+        <img class="w-6" src="./assets/notification.png" alt="Notifications" />
+        <span
+          class="text-xs rounded-full bg-[#FE5F50] px-1 absolute top-[-0.25rem] right-[-0.25rem]"
+        >
+          5
+        </span>
+      </a>
+      <div class="relative flex-shrink-0">
+        <div>
+          <button
+            type="button"
+            class="relative flex items-center gap-2 rounded-full bg-white"
+            id="user-menu-button"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">Open user menu</span>
+            <img
+              class="h-8 w-8 rounded-full"
+              src="./assets/img.png"
+              alt="User"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
     <!-- navbar -->
-    <header class="bg-white shadow">
+    <header class="bg-white shadow hidden sm:block">
       <div
-        class="mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-12"
+        class="mx-auto max-w-7xl relative px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-12"
       >
         <div class="relative flex h-16 justify-between">
-          <div class="relative z-10 flex px-2 lg:px-0 items-center gap-1">
+          <div
+            class="relative z-10 sm:flex px-2 lg:px-0 items-center gap-1 hidden"
+          >
             <div class="flex flex-shrink-0 items-center">
               <img
                 class="h-11 w-auto"
@@ -35,10 +93,11 @@
               Communities
             </p>
           </div>
+
           <div
-            class="relative z-0 flex flex-1 gap-8 items-center justify-center px-2 sm:absolute sm:inset-0"
+            class="relative z-0 sm:flex hidden flex-1 gap-8 items-center justify-center px-2 sm:absolute sm:inset-0"
           >
-            <div class="hidden lg:block">
+            <div class="hidden lg:block cursor-pointer">
               <img src="./assets/home.png" alt="" />
             </div>
             <div class="w-full sm:max-w-xs">
@@ -64,49 +123,7 @@
               Upgrade to Pro
             </button>
           </div>
-          <div class="relative z-10 flex items-center lg:hidden">
-            <!-- Mobile menu button -->
-            <button
-              type="button"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-100 hover:text-gray-500 focus:outline-none"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-              id="mobile-menu-button"
-            >
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open menu</span>
 
-              <svg
-                class="block h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-
-              <svg
-                class="hidden h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
           <div
             class="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center xl:gap-4"
           >
@@ -300,7 +317,7 @@
     </header>
     <!-- hero-section -->
     <section
-      class="hero-section mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8 mt-8"
+      class="hero-section mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8 sm:mt-8 mt-16"
     >
       <div
         class="hero-section-content flex flex-col items-center gap-8 py-16 lg:py-16 xl:py-20"
@@ -725,46 +742,7 @@
         </div>
       </div>
     </section>
-    <!-- Bottom Menu -->
-    <div
-      id="bottom-menu"
-      class="fixed bottom-0 left-0 right-0 sm:hidden bg-white shadow-lg border-t border-gray-200 py-4 px-1 flex justify-between items-center transition-transform duration-300 transform translate-y-full"
-    >
-      <a href="#" class="text-custom-black text-sm flex items-center gap-2"
-        ><img class="w-6" src="./assets/home.png" alt="" />
-      </a>
-      <a href="#" class="text-custom-black text-sm">
-        <img class="w-6" src="./assets/search-normal.png" alt="" />
-      </a>
-      <a href="#" class="text-custom-black text-sm"
-        ><img class="w-6" src="./assets/person.png" alt="" />
-      </a>
-      <a href="#" class="text-custom-black text-sm"
-        ><img class="w-6" src="./assets/sound.png" alt="" />
-      </a>
-      <a href="#" class="text-custom-black text-sm"
-        ><img class="w-6" src="./assets/shop.png" alt="" />
-      </a>
-      <a href="#" class="text-custom-black text-sm"
-        ><img class="w-6" src="./assets/notification.png" alt="" />
-      </a>
-      <div class="relative flex-shrink-0">
-        <div>
-          <button
-            type="button"
-            class="relative flex items-center gap-2 rounded-full bg-white"
-            id="user-menu-button"
-            aria-expanded="false"
-            aria-haspopup="true"
-            id="menu-button-two"
-          >
-            <span class="absolute -inset-1.5"></span>
-            <span class="sr-only">Open user menu</span>
-            <img class="h-8 w-8 rounded-full" src="./assets/img.png" alt="" />
-          </button>
-        </div>
-      </div>
-    </div>
+
     <footer aria-labelledby="footer-heading">
       <div class="mx-auto max-w-7xl px-2 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
         <div
