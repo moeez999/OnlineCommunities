@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <header class="bg-white shadow">
+      <div
+        class="mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-12"
+      >
+        <div class="relative flex h-16 justify-between">
+          <div class="relative z-10 flex px-2 lg:px-0 items-center gap-1">
+            <div class="flex flex-shrink-0 items-center">
+              <img
+                class="h-11 w-auto"
+                src="../assets/logo.png"
+                alt="Your Company"
+              />
+            </div>
+            <span class="text-gray-200"> │ </span>
+            <p class="text-base text-custom-black leading-5 text-semibold">
+              Online <br />
+              Communities
+            </p>
+          </div>
+          <div
+            class="relative z-0 flex flex-1 gap-8 items-center justify-center px-2 sm:absolute sm:inset-0"
+          >
+            <div class="hidden lg:block">
+              <img src="./assets/home.png" alt="" />
+            </div>
+            <div class="w-full sm:max-w-xs">
+              <label for="search" class="sr-only">Search</label>
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                >
+                  <img src="./assets/search-normal.png" alt="" />
+                </div>
+                <input
+                  id="search"
+                  name="search"
+                  class="block w-full rounded-2xl border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-custom-gray focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="Search here...."
+                  type="search"
+                />
+              </div>
+            </div>
+            <button
+              class="bg-[#313030] hidden lg:block text-white px-5 py-2 rounded-tr-3xl rounded-bl-3xl text-sm font-medium"
+            >
+              Upgrade to Pro
+            </button>
+          </div>
+          <div class="relative z-10 flex items-center lg:hidden">
+            <!-- Mobile menu button -->
+            <button
+              type="button"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-100 hover:text-gray-500 focus:outline-none"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              id="mobile-menu-button"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open menu</span>
+
+              <svg
+                class="block h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+
+              <svg
+                class="hidden h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center xl:gap-4"
+          >
+            <span class="text-gray-200"> │ </span>
+            <button
+              type="button"
+              class="relative flex-shrink-0 relative rounded-full bg-white p-1 text-white hover:text-gray-500"
+            >
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">View notifications</span>
+              <img src="./assets/person.png" alt="" />
+              <span
+                class="text-xs rounded-full bg-[#FE5F50] px-1 absolute top-0 right-0"
+              >
+                5
+              </span>
+            </button>
+            <button
+              type="button"
+              class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+            >
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">View notifications</span>
+              <img src="./assets/sound.png" alt="" />
+            </button>
+            <button
+              type="button"
+              class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+            >
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">View notifications</span>
+              <img src="./assets/shop.png" alt="" />
+            </button>
+            <button
+              type="button"
+              class="relative flex-shrink-0 relative rounded-full bg-white p-1 text-white hover:text-gray-500"
+            >
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">View notifications</span>
+              <img src="./assets/notification.png" alt="" />
+              <span
+                class="text-xs rounded-full bg-[#FE5F50] px-1 absolute top-0 right-0"
+              >
+                5
+              </span>
+            </button>
+
+            <!-- Profile dropdown -->
+            <div class="relative ml-4 flex-shrink-0">
+              <div>
+                <button
+                  type="button"
+                  class="relative flex items-center gap-2 rounded-full bg-white"
+                  id="user-menu-button"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  id="menu-button-two"
+                >
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">Open user menu</span>
+                  <img
+                    class="h-8 w-8 rounded-full"
+                    src="./assets/img.png"
+                    alt=""
+                  />
+                  <img src="./assets/downarrow.png" alt="" />
+                </button>
+              </div>
+
+              <div
+                class="absolute hidden-2 right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="user-menu-button"
+                tabindex="-1"
+                id="menu-two"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-custom-black"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-0"
+                  >Your Profile</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-custom-black"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-1"
+                  >Settings</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-custom-black"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-2"
+                  >Sign out</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <nav class="hidden md:hidden" aria-label="Global" id="mobile-menu">
+        <div class="border-t border-gray-200 pb-3 pt-4">
+          <div class="flex items-center px-4">
+            <div class="flex-shrink-0">
+              <img
+                class="h-10 w-10 rounded-full"
+                src="./assets/img.png"
+                alt=""
+              />
+            </div>
+            <div class="ml-3">
+              <div class="text-base font-medium text-gray-800">Tom Cook</div>
+              <div class="text-sm font-medium text-gray-500">
+                tom@example.com
+              </div>
+            </div>
+            <button
+              type="button"
+              class="relative ml-auto flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+            >
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">View notifications</span>
+            </button>
+          </div>
+          <div class="mt-3 space-y-1 px-2">
+            <div class="flex gap-2">
+              <button
+                type="button"
+                class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <img src="./assets/person.png" alt="" />
+              </button>
+              <button
+                type="button"
+                class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <img src="./assets/sound.png" alt="" />
+              </button>
+              <button
+                type="button"
+                class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <img src="./assets/shop.png" alt="" />
+              </button>
+              <button
+                type="button"
+                class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <img src="./assets/notification.png" alt="" />
+              </button>
+            </div>
+            <button
+              class="bg-[#313030] text-white px-5 py-2 rounded-tr-3xl rounded-bl-3xl text-sm font-medium"
+            >
+              Upgrade to Pro
+            </button>
+            <a
+              href="#"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900"
+              >Your Profile</a
+            >
+            <a
+              href="#"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900"
+              >Settings</a
+            >
+            <a
+              href="#"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900"
+              >Sign out</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- hero-section -->
+    <section
+      class="hero-section mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8 mt-8"
+    >
+      <div
+        class="hero-section-content flex flex-col items-center gap-8 py-16 lg:py-16 xl:py-20"
+      >
+        <h1
+          class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white font-medium text-center font-roboto"
+        >
+          Tell the world about your <br />
+          upcoming event.
+        </h1>
+        <p
+          class="text-sm md:text-base lg:text-lg text-white text-center font-roboto"
+        >
+          Expand your reach and boost attendance.
+        </p>
+        <button
+          class="text-sm md:text-base lg:text-lg border-2 border-white text-white rounded-3xl px-8 py-3"
+        >
+          Create an event
+        </button>
+      </div>
+    </section>
+
+    <!-- search Event -->
+
+    <section class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-12 mt-16">
+      <div
+        class="bg-custom-black rounded-[20px] px-12 py-8 text-white flex flex-col items-center sm:flex-row gap-8 md:gap-16"
+      >
+        <!-- Search Event -->
+        <div class="flex-1 w-full">
+          <label class="block text-white text-base font-medium mb-1"
+            >Search Event</label
+          >
+          <input
+            type="text"
+            placeholder="Event"
+            class="w-full bg-transparent border-b-2 border-[#969694] text-white py-2 px- outline-none"
+          />
+        </div>
+
+        <!-- Place -->
+        <div class="flex-1 w-full">
+          <label class="block text-white text-base font-medium mb-1"
+            >Place</label
+          >
+          <input
+            type="text"
+            placeholder="Place"
+            class="w-full text-white bg-transparent border-b-2 border-[#969694] text-white py-2 px- outline-none"
+          />
+        </div>
+
+        <!-- Time -->
+        <div class="flex-1 w-full">
+          <label class="block text-white text-base font-medium mb-1"
+            >Time</label
+          >
+
+          <select
+            class="w-full bg-transparent border-b-2 border-[#969694] text-white py-2.5 px- outline-none"
+          >
+            <option>Any date</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- featured events -->
+    <section class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-12 mt-16">
+      <div class="flex flex-col gap-4 md:flex-row items-center justify-between">
+        <div>
+          <h1 class="text-2xl md:text-3xl lg:text-4xl font-roboto font-bold">
+            Featured Events
+          </h1>
+        </div>
+        <div
+          class="px-8 md:px-0 flex flex-wrap justify-center items-center gap-8"
+        >
+          <div>
+            <div
+              class="flex border border-[#79747E] rounded-full overflow-hidden w-fit"
+            >
+              <button
+                class="px-4 py-2 border-r border-[#79747E] text-sm font-semibold text-white bg-[#FE5F50] flex items-center space-x-2 w-32"
+              >
+                <span class="mx-1"><img src="./assets/tick.png" alt="" /></span>
+                <span>In-Person</span>
+              </button>
+              <button
+                class="px-4 py-2 text-sm text-custom-black w-32 font-semibold"
+              >
+                Virtual
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-[#DAD9D763] px-6 py-2 rounded-full overflow-hidden w-full md:w-fit"
+          >
+            <select
+              class="bg-transparent text-sm font-medium w-full md:w-28"
+              name="weekdays"
+              id=""
+            >
+              <option value="" selected>Weekdays</option>
+            </select>
+          </div>
+          <div
+            class="bg-[#DAD9D763] px-6 py-2 rounded-full overflow-hidden w-full md:w-fit"
+          >
+            <select
+              class="bg-transparent text-sm font-medium w-full md:w-28"
+              name="eventtype"
+              id=""
+            >
+              <option value="" selected>Event Type</option>
+            </select>
+          </div>
+          <div
+            class="bg-[#DAD9D763] px-6 py-2 rounded-full overflow-hidden w-full md:w-fit"
+          >
+            <select
+              class="bg-transparent text-sm font-medium w-full md:w-28"
+              name="anycategory"
+              id=""
+            >
+              <option value="" selected>Any Category</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div
+        id="card-container"
+        class="mt-16 card-section font-roboto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center"
+      >
+        <!-- Modal -->
+        <div
+          id="card-modal"
+          class="fixed inset-0 lg:left-[35rem] xl:left-[50rem] z-10 flex font-roboto items-center justify-center hidden overflow-y-auto"
+        >
+          <div class="bg-white rounded-xl max-w-sm w-full p-4 py-2">
+            <div class="flex items-center justify-between gap-1 text-xs mt-2">
+              <div class="flex items-center gap-1">
+                <img
+                  class="h-8 w-8 rounded-full"
+                  src="./assets/img.png"
+                  alt=""
+                />
+                <p class="font-medium">BamBang</p>
+                <img class="w-2" src="./assets/downarrow.png" alt="" />
+              </div>
+              <button
+                class="px-6 pt-1 pb-0.5 border border-[#313030] text-custom-black rounded-full"
+              >
+                follow
+              </button>
+            </div>
+            <div class="flex items-center justify-between gap-1 text-xs mt-6">
+              <img
+                class="cursor-pointer"
+                id="modal-close"
+                src="./assets/arrow-left.png"
+                alt=""
+              />
+              <h2 class="text-[#0D0D0D] text-xl font-medium">Details</h2>
+            </div>
+            <div class="relative mt-6">
+              <img
+                id="modal-image"
+                class="w-full h-48 object-cover rounded-2xl"
+                src=""
+                alt="Event image"
+              />
+            </div>
+            <div class="mt-4">
+              <p
+                id="modal-title"
+                class="text-[#0D0D0D] text-base font-semibold"
+              ></p>
+              <div class="flex items-center gap-1 text-xs mt-2">
+                <p id="modal-date" class="text-[#76777C]"></p>
+                <span class="text-sm text-[#76777C]">•</span>
+                <p id="modal-time" class="text-[#76777C]"></p>
+              </div>
+              <div class="flex items-center justify-between gap-1 text-xs mt-6">
+                <h2 class="text-[#0D0D0D] text-xl font-medium">Admission</h2>
+                <p class="bg-[#F9F9F9] px-4 py-1 text-base rounded-full">
+                  <span class="text-[#76777C] font-medium">$</span> 99,99
+                </p>
+              </div>
+
+              <div class="mt-8">
+                <h2 class="text-[#0D0D0D] text-xl font-medium">Description</h2>
+                <p class="text-[#828282] text-xs mt-4">
+                  The cornerstone of Summerfest hosting the music industry’s
+                  hottest stars. A separate ticket is needed to see concerts in
+                  the
+                  <span class="text-custom-black font-medium">read more</span>
+                </p>
+              </div>
+              <div class="mt-4">
+                <h2 class="text-[#0D0D0D] text-xl font-medium">Location</h2>
+                <p class="flex items-center gap-1 text-[#76777C] text-xs mt-4">
+                  <img src="./assets/Discovery.png" alt="" /> 3517 W. Gray St.
+                  Utica, Pennsylvania 57867
+                </p>
+              </div>
+
+              <div class="mt-8">
+                <button
+                  class="bg-custom-black w-full text-white rounded-3xl px-8 py-2"
+                >
+                  More Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 flex justify-center">
+        <button
+          class="px-8 py-2 font-roboto text-custom-black border-2 border-[#313030] rounded-3xl font-medium"
+        >
+          Load More
+        </button>
+      </div>
+    </section>
+
+    <!-- make our own event  -->
+
+    <section
+      class="bg-custom-orange mt-24 md:h-[11.1rem] lg:h-[15.75rem] hidden md:block"
+    >
+      <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-12 mt-8 relative">
+        <div class="mb-24 absolute md:top-[-2.25rem] lg:top-[-3.25rem]">
+          <img class="md:w-96 lg:w-full" src="./assets/img2.png" alt="" />
+        </div>
+        <div
+          class="flex flex-col items-start gap-2 md:py-4 lg:py-12 absolute md:right-20 lg:right-24 xl:right-72"
+        >
+          <h1
+            class="text-xl md:text-3xl lg:text-4xl text-custom-black font-bold font-roboto"
+          >
+            Make your own event
+          </h1>
+          <p class="text-sm text-custom-black font-roboto font-medium">
+            Share the excitement of your event with the <br />
+            world.
+          </p>
+          <button
+            class="bg-[#FE5F50] md:p-2 lg:px-4 w-[75%] lg:py-4 text-base text-white rounded-[3rem] font-bold font-roboto"
+          >
+            Create Events
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="bg-custom-orange mt-24 block md:hidden">
+      <div
+        class="mx-auto max-w-7xl px-4 pt-4 sm:px-4 lg:px-12 mt-8 flex flex-col-reverse items-center gap-8"
+      >
+        <div class="">
+          <img class="md:w-96 lg:w-full" src="./assets/img2.png" alt="" />
+        </div>
+        <div class="flex flex-col items-center gap-2 md:py-4 lg:py-12">
+          <h1
+            class="text-3xl md:text-3xl lg:text-4xl text-custom-black font-bold font-roboto"
+          >
+            Make your own event
+          </h1>
+          <p class="text-sm text-custom-black font-roboto font-medium">
+            Share the excitement of your event with the world.
+          </p>
+          <button
+            class="bg-[#FE5F50] w-full p-2 md:p-2 lg:px-4 px-12 lg:py-4 text-base text-white rounded-[3rem] font-bold font-roboto"
+          >
+            Create Events
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- category-section -->
+    <section class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-12 mt-8">
+      <h1 class="text-2xl md:text-3xl lg:text-4xl font-roboto font-bold">
+        Categories
+      </h1>
+
+      <div class="mt-12 sm:flex flex-col gap-8 hidden">
+        <div class="flex flex-wrap justify-center gap-16">
+          <div class="text-center">
+            <img src="./assets/10.png" alt="10" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Networking
+            </p>
+          </div>
+          <div class="text-center">
+            <img src="./assets/9.png" alt="9" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Workshops
+            </p>
+          </div>
+          <div class="text-center">
+            <img src="./assets/8.png" alt="8" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Webinars
+            </p>
+          </div>
+          <div class="text-center">
+            <img src="./assets/7.png" alt="7" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Panel Talks
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-16">
+          <div class="text-center">
+            <img src="./assets/6.png" alt="6" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Career Fairs
+            </p>
+          </div>
+          <div class="text-center">
+            <img src="./assets/5.png" alt="5" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Entertainment
+            </p>
+          </div>
+          <div class="text-center">
+            <img src="./assets/4.png" alt="4" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Cultural Events
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-16">
+          <div class="text-center">
+            <img src="./assets/3.png" alt="3" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Mentorship
+            </p>
+          </div>
+          <div class="text-center">
+            <img src="./assets/2.png" alt="2" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Innovation Challenges
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-16">
+          <div class="text-center">
+            <img src="./assets/1.png" alt="1" />
+            <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+              Wellness
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 sm:hidden">
+        <div class="text-center">
+          <img src="./assets/10.png" alt="10" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Networking
+          </p>
+        </div>
+        <div class="text-center">
+          <img src="./assets/9.png" alt="9" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Workshops
+          </p>
+        </div>
+        <div class="text-center">
+          <img src="./assets/8.png" alt="8" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Webinars
+          </p>
+        </div>
+        <div class="text-center">
+          <img src="./assets/7.png" alt="7" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Panel Talks
+          </p>
+        </div>
+
+        <div class="text-center">
+          <img src="./assets/6.png" alt="6" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Career Fairs
+          </p>
+        </div>
+        <div class="text-center">
+          <img src="./assets/5.png" alt="5" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Entertainment
+          </p>
+        </div>
+        <div class="text-center">
+          <img src="./assets/4.png" alt="4" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Cultural Events
+          </p>
+        </div>
+
+        <div class="text-center">
+          <img src="./assets/3.png" alt="3" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Mentorship
+          </p>
+        </div>
+        <div class="text-center">
+          <img src="./assets/2.png" alt="2" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Innovation Challenges
+          </p>
+        </div>
+
+        <div class="text-center">
+          <img src="./assets/1.png" alt="1" />
+          <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
+            Wellness
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer aria-labelledby="footer-heading">
+      <div class="mx-auto max-w-7xl px-2 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
+        <div
+          class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24 flex-row-reverse"
+        >
+          <div class="flex space-x-2 md:space-x-6 md:order-2 justify-center">
+            <a href="#" class="text-[#616161] hover:text-gray-500 text-xs">
+              Home
+            </a>
+            <a href="#" class="text-[#616161] hover:text-gray-500 text-xs">
+              About Us
+            </a>
+            <a href="#" class="text-[#616161] hover:text-gray-500 text-xs">
+              Support
+            </a>
+            <a href="#" class="text-[#616161] hover:text-gray-500 text-xs">
+              Terms of Use
+            </a>
+            <a href="#" class="text-[#616161] hover:text-gray-500 text-xs">
+              Privacy Policy
+            </a>
+          </div>
+          <p
+            class="mt-8 text-xs leading-5 text-[#616161] md:order-1 md:mt-0 text-center md:text-left"
+          >
+            © 2024 bic. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./Js/index.js"></script>
+  </body>
+</html>

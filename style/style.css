@@ -1,0 +1,54 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+}
+.bg-custom-black {
+  background-color: #313030;
+}
+.text-custom-black {
+  color: #313030;
+}
+.bg-custom-orange {
+  background-color: #fae7e5;
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+.text-custom-gray {
+  color: #536471 !important;
+}
+.hidden-2 {
+  display: none;
+}
+
+.hero-section-content {
+  background: url(../assets/hero-img.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  border-radius: 20px;
+  background-position: center;
+}
+#card-modal {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#card-modal.open {
+  transform: translateX(0);
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#card-modal.open {
+  animation: slideInFromRight 0.3s ease-in-out;
+}
