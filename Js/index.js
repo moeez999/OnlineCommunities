@@ -122,11 +122,16 @@ cards.forEach((card) => {
   );
 
   cardElement.innerHTML = `
-      <div class="relative card-image">
-        <img class="w-full h-48 object-cover" src="${
+      <div class="relative ">
+        <img class="w-full card-image h-48 object-cover" src="${
           card.imageSrc
         }" alt="Event image" />
-        <img class="absolute top-4 right-2" src=${card.checkimg} alt="" />
+        <div class="cursor-pointer ">
+        <img class="absolute hover:scale-110 top-4 right-2 check-image" src=${
+          card.checkimg
+        } alt="" />
+        
+        </div>
       </div>
       <div class="px-6 py-4">
         <div class="font-bold flex justify-between text-base mb-2">
@@ -171,6 +176,16 @@ cards.forEach((card) => {
   // Add event listeners to both the image and title
   cardElement.querySelector(".card-image").addEventListener("click", showModal);
   cardElement.querySelector(".card-title").addEventListener("click", showModal);
+
+  // Event listener for check image
+  const checkImage = cardElement.querySelector(".check-image");
+  checkImage.addEventListener("click", () => {
+    if (checkImage.src.includes("check-2.png")) {
+      checkImage.src = "./assets/check.png";
+    } else {
+      checkImage.src = "./assets/check-2.png";
+    }
+  });
 });
 
 // Close modal logic (if needed)
@@ -179,4 +194,19 @@ document.getElementById("modal-close").addEventListener("click", () => {
   setTimeout(() => {
     cardModal.classList.add("hidden");
   }, 300); // Match the transition time
+});
+
+let lastScrollTop = 0;
+const bottomMenu = document.getElementById("bottom-menu");
+
+window.addEventListener("scroll", function () {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down
+    bottomMenu.classList.remove("translate-y-full");
+  } else {
+    // Scrolling up
+    bottomMenu.classList.add("translate-y-full");
+  }
+  lastScrollTop = scrollTop;
 });
