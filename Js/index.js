@@ -2,12 +2,11 @@ let menuButton = document.getElementById("mobile-menu-button");
 let menuButtonTwo = document.getElementById("user-menu-button");
 let menu = document.getElementById("mobile-menu");
 let menuTwo = document.getElementById("menu-two");
-
+menuButtonTwo.addEventListener("click", () => {
+  menuTwo.classList.toggle("hidden-2");
+});
 // menuButton.addEventListener("click", () => {
 //   menu.classList.toggle("hidden");
-// });
-// menuButtonTwo.addEventListener("click", () => {
-//   menuTwo.classList.toggle("hidden-2");
 // });
 
 const cards = [
