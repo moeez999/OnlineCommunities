@@ -38,6 +38,16 @@ body {
   transform: translateX(0);
 }
 
+@media screen and (min-width: 1280px) {
+  .left-custom {
+    left: 53rem !important;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .left-custom {
+    left: 64rem !important;
+  }
+}
 @keyframes slideInFromRight {
   0% {
     transform: translateX(100%);
