@@ -1,6 +1,15 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1,
+p {
+  margin: 0;
 }
 .bg-custom-black {
   background-color: #313030;
@@ -140,10 +149,6 @@ body {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.text-custom-black {
-  color: #000000; /* Customize this value as needed */
-}
-
 .text-sm {
   font-size: 0.875rem;
 }
@@ -167,7 +172,9 @@ body {
 .rounded-full {
   border-radius: 9999px;
 }
-
+.bg-transparent {
+  background-color: transparent;
+}
 .bg-custom-1 {
   background-color: #fe5f50;
 }
@@ -456,6 +463,10 @@ body {
   width: 2.5rem;
 }
 
+.w-16 {
+  width: 8rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -534,14 +545,13 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.border-none {
+  border: 0;
+}
 
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.bg-custom-black {
-  background-color: #000000; /* Customize this value as needed */
 }
 
 .bg-rounded-custom {
@@ -567,15 +577,11 @@ body {
 }
 
 .border-b-2 {
-  border-bottom-width: 2px;
+  border-bottom: 1px solid #969694;
 }
 
 .border-custom-1 {
   border-color: #969694;
-}
-
-.px- {
-  /* Custom styles if padding-x is defined */
 }
 
 .outline-none {
@@ -604,7 +610,7 @@ body {
 }
 
 .border-custom-2 {
-  border-color: #79747e;
+  border: 1px solid #79747e;
 }
 
 .overflow-hidden {
@@ -628,9 +634,11 @@ body {
 }
 
 .w-32 {
-  width: 8rem;
+  width: 9rem;
 }
-
+.border-custom-4 {
+  border-color: #313030;
+}
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -776,10 +784,6 @@ body {
 
 .mr-2 {
   margin-right: 0.5rem;
-}
-
-.bg-custom-orange {
-  background-color: #ffa500; /* Customize this value as needed */
 }
 
 .mt-24 {

@@ -8,8 +8,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="./style/style.css" />
     <title>Document</title>
   </head>
@@ -36,7 +34,7 @@
       <a href="#" class="text-custom-black text-sm relative">
         <img class="w-6" src="./assets/person.png" alt="Profile" />
         <span
-          class="text-xs rounded-full bg-custom-1px-1 absolute top-custom-1 right-custom-1"
+          class="text-xs rounded-full bg-custom-1 px-1 absolute top-custom-1 right-custom-1"
         >
           5
         </span>
@@ -50,7 +48,7 @@
       <a href="#" class="text-custom-black text-sm relative">
         <img class="w-6" src="./assets/notification.png" alt="Notifications" />
         <span
-          class="text-xs rounded-full bg-custom-1px-1 absolute top-custom-1 right-custom-1"
+          class="text-xs rounded-full bg-custom-1 px-1 absolute top-custom-1 right-custom-1"
         >
           5
         </span>
@@ -59,12 +57,10 @@
         <div>
           <button
             type="button"
-            class="relative flex items-center gap-2 rounded-full bg-white"
+            class="relative flex items-center gap-2 rounded-full bg-white border-none"
             aria-expanded="false"
             aria-haspopup="true"
           >
-            <span class="absolute inset-custom-1"></span>
-            <span class="sr-only">Open user menu</span>
             <img
               class="h-8 w-8 rounded-full"
               src="./assets/img.png"
@@ -114,7 +110,7 @@
                 <input
                   id="search"
                   name="search"
-                  class="block w-full rounded-2xl border-0 bg-white py-custom-1 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-custom-gray focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm-text-sm sm-leading-6"
+                  class="block w-full rounded-2xl border-0 bg-white outline-none py-custom-1 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-custom-gray 0sm-text-sm sm-leading-6"
                   placeholder="Search here...."
                   type="search"
                 />
@@ -133,20 +129,20 @@
             <span class="text-gray-200"> │ </span>
             <button
               type="button"
-              class="relative flex-shrink-0 relative rounded-full bg-white p-1 text-white hover:text-gray-500"
+              class="relative flex-shrink-0 relative border-none bg-white p-1 text-white hover:text-gray-500"
             >
               <span class="absolute inset-custom-1"></span>
               <span class="sr-only">View notifications</span>
               <img src="./assets/person.png" alt="" />
               <span
-                class="text-xs rounded-full bg-custom-1px-1 absolute top-0 right-0"
+                class="text-xs rounded-full bg-custom-1 px-1 absolute top-0 right-0"
               >
                 5
               </span>
             </button>
             <button
               type="button"
-              class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+              class="relative flex-shrink-0 border-none bg-white p-1 text-white hover:text-gray-500"
             >
               <span class="absolute inset-custom-1"></span>
               <span class="sr-only">View notifications</span>
@@ -154,7 +150,7 @@
             </button>
             <button
               type="button"
-              class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+              class="relative flex-shrink-0 border-none bg-white p-1 text-white hover:text-gray-500"
             >
               <span class="absolute inset-custom-1"></span>
               <span class="sr-only">View notifications</span>
@@ -162,13 +158,13 @@
             </button>
             <button
               type="button"
-              class="relative flex-shrink-0 relative rounded-full bg-white p-1 text-white hover:text-gray-500"
+              class="relative flex-shrink-0 relative border-none bg-white p-1 text-white hover:text-gray-500"
             >
               <span class="absolute inset-custom-1"></span>
               <span class="sr-only">View notifications</span>
               <img src="./assets/notification.png" alt="" />
               <span
-                class="text-xs rounded-full bg-custom-1px-1 absolute top-0 right-0"
+                class="text-xs rounded-full bg-custom-1 px-1 absolute top-0 right-0"
               >
                 5
               </span>
@@ -179,7 +175,7 @@
               <div>
                 <button
                   type="button"
-                  class="relative flex items-center gap-2 rounded-full bg-white"
+                  class="relative flex items-center gap-2 border-none bg-white"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
@@ -263,7 +259,7 @@
             <div class="flex gap-2">
               <button
                 type="button"
-                class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+                class="relative flex-shrink-0 bg-white p-1 text-white hover:text-gray-500"
               >
                 <span class="absolute inset-custom-1"></span>
                 <span class="sr-only">View notifications</span>
@@ -271,7 +267,7 @@
               </button>
               <button
                 type="button"
-                class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+                class="relative flex-shrink-0 bg-white p-1 text-white hover:text-gray-500"
               >
                 <span class="absolute inset-custom-1"></span>
                 <span class="sr-only">View notifications</span>
@@ -279,7 +275,7 @@
               </button>
               <button
                 type="button"
-                class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+                class="relative flex-shrink-0 bg-white p-1 text-white hover:text-gray-500"
               >
                 <span class="absolute inset-custom-1"></span>
                 <span class="sr-only">View notifications</span>
@@ -287,7 +283,7 @@
               </button>
               <button
                 type="button"
-                class="relative flex-shrink-0 rounded-full bg-white p-1 text-white hover:text-gray-500"
+                class="relative flex-shrink-0 bg-white p-1 text-white hover:text-gray-500"
               >
                 <span class="absolute inset-custom-1"></span>
                 <span class="sr-only">View notifications</span>
@@ -337,7 +333,7 @@
           Expand your reach and boost attendance.
         </p>
         <button
-          class="text-sm md-text-base lg-text-lg border-2 border-white text-white rounded-3xl px-8 py-3"
+          class="text-sm bg-transparent md-text-base lg-text-lg border-2 border-white text-white rounded-3xl px-8 py-3"
         >
           Create an event
         </button>
@@ -351,37 +347,37 @@
         class="bg-custom-black bg-rounded-custom px-12 py-8 text-white flex flex-col items-center sm-flex-row gap-8 md-gap-16"
       >
         <!-- Search Event -->
-        <div class="flex-1 w-full">
+        <div class="flex-1 w-full border-b-2">
           <label class="block text-white text-base font-medium mb-1"
             >Search Event</label
           >
           <input
             type="text"
             placeholder="Event"
-            class="w-full bg-transparent border-b-2 border-custom-1 text-white py-2 px- outline-none"
+            class="w-full bg-transparent border-none text-white py-2 px- outline-none"
           />
         </div>
 
         <!-- Place -->
-        <div class="flex-1 w-full">
+        <div class="flex-1 w-full border-b-2">
           <label class="block text-white text-base font-medium mb-1"
             >Place</label
           >
           <input
             type="text"
             placeholder="Place"
-            class="w-full text-white bg-transparent border-b-2 border-custom-1 text-white py-2 px- outline-none"
+            class="w-full text-white bg-transparent border-none text-white py-2 px- outline-none"
           />
         </div>
 
         <!-- Time -->
-        <div class="flex-1 w-full">
+        <div class="flex-1 w-full border-b-2">
           <label class="block text-white text-base font-medium mb-1"
             >Time</label
           >
 
           <select
-            class="w-full bg-transparent border-b-2 border-custom-1 text-white py-custom-2 px- outline-none"
+            class="w-full bg-transparent border-none text-white py-custom-2 px- outline-none"
           >
             <option>Any date</option>
           </select>
@@ -402,16 +398,16 @@
         >
           <div>
             <div
-              class="flex border border-custom-2 rounded-full overflow-hidden w-fit"
+              class="flex border-custom-2 rounded-full overflow-hidden w-fit"
             >
               <button
-                class="px-4 py-2 border-r border-custom-2 text-sm font-semibold text-white bg-custom-1flex items-center space-x-2 w-32"
+                class="px-4 py-2 border-none text-sm font-semibold text-white bg-custom-1 flex items-center space-x-2 w-32"
               >
                 <span class="mx-1"><img src="./assets/tick.png" alt="" /></span>
                 <span>In-Person</span>
               </button>
               <button
-                class="px-4 py-2 text-sm text-custom-black w-32 font-semibold"
+                class="px-4 py-2 text-sm border-none text-custom-black w-32 font-semibold"
               >
                 Virtual
               </button>
@@ -421,7 +417,7 @@
             class="bg-custom-2 px-6 py-2 rounded-full overflow-hidden w-full md-w-fit"
           >
             <select
-              class="bg-transparent text-sm font-medium w-full md-w-28"
+              class="bg-transparent text-sm font-medium w-full md-w-28 border-none outline-none"
               name="weekdays"
               id=""
             >
@@ -432,7 +428,7 @@
             class="bg-custom-2 px-6 py-2 rounded-full overflow-hidden w-full md-w-fit"
           >
             <select
-              class="bg-transparent text-sm font-medium w-full md-w-28"
+              class="bg-transparent text-sm font-medium w-full md-w-28 border-none outline-none"
               name="eventtype"
               id=""
             >
@@ -443,7 +439,7 @@
             class="bg-custom-2 px-6 py-2 rounded-full overflow-hidden w-full md-w-fit"
           >
             <select
-              class="bg-transparent text-sm font-medium w-full md-w-28"
+              class="bg-transparent text-sm font-medium w-full md-w-28 border-none outline-none"
               name="anycategory"
               id=""
             >
@@ -542,7 +538,7 @@
       </div>
       <div class="mt-16 flex justify-center">
         <button
-          class="px-8 py-2 font-roboto text-custom-black border-2 border-custom-3 rounded-3xl font-medium"
+          class="px-8 py-2 text-xl font-roboto text-custom-black border-2 border-transparent rounded-3xl font-medium"
         >
           Load More
         </button>
@@ -571,7 +567,7 @@
             world.
           </p>
           <button
-            class="bg-custom-1md-p-2 lg-px-4 w-custom-75 lg-py-4 text-base text-white rounded-custom-2 font-bold font-roboto"
+            class="bg-custom-1 md-p-2 lg-px-4 w-custom-75 lg-py-4 text-base text-white rounded-custom-2 border-none font-bold font-roboto"
           >
             Create Events
           </button>
@@ -595,7 +591,7 @@
             Share the excitement of your event with the world.
           </p>
           <button
-            class="bg-custom-1w-full p-2 md-p-2 lg-px-4 px-12 lg-py-4 text-base text-white rounded-custom-2 font-bold font-roboto"
+            class="bg-custom-1 w-full p-2 md-p-2 lg-px-4 px-12 lg-py-4 text-base text-white rounded-custom-2 font-bold font-roboto"
           >
             Create Events
           </button>
@@ -681,64 +677,64 @@
 
       <div class="grid grid-cols-2 gap-4 sm-hidden">
         <div class="text-center">
-          <img src="./assets/10.png" alt="10" />
+          <img class="w-16" src="./assets/10.png" alt="10" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Networking
           </p>
         </div>
         <div class="text-center">
-          <img src="./assets/9.png" alt="9" />
+          <img class="w-16" src="./assets/9.png" alt="9" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Workshops
           </p>
         </div>
         <div class="text-center">
-          <img src="./assets/8.png" alt="8" />
+          <img class="w-16" src="./assets/8.png" alt="8" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Webinars
           </p>
         </div>
         <div class="text-center">
-          <img src="./assets/7.png" alt="7" />
+          <img class="w-16" src="./assets/7.png" alt="7" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Panel Talks
           </p>
         </div>
 
         <div class="text-center">
-          <img src="./assets/6.png" alt="6" />
+          <img class="w-16" src="./assets/6.png" alt="6" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Career Fairs
           </p>
         </div>
         <div class="text-center">
-          <img src="./assets/5.png" alt="5" />
+          <img class="w-16" src="./assets/5.png" alt="5" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Entertainment
           </p>
         </div>
         <div class="text-center">
-          <img src="./assets/4.png" alt="4" />
+          <img class="w-16" src="./assets/4.png" alt="4" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Cultural Events
           </p>
         </div>
 
         <div class="text-center">
-          <img src="./assets/3.png" alt="3" />
+          <img class="w-16" src="./assets/3.png" alt="3" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Mentorship
           </p>
         </div>
         <div class="text-center">
-          <img src="./assets/2.png" alt="2" />
+          <img class="w-16" src="./assets/2.png" alt="2" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Innovation Challenges
           </p>
         </div>
 
         <div class="text-center">
-          <img src="./assets/1.png" alt="1" />
+          <img class="w-16" src="./assets/1.png" alt="1" />
           <p class="text-custom-black text-lg mt-4 font-medium font-roboto">
             Wellness
           </p>
