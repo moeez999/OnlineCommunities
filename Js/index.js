@@ -214,3 +214,28 @@ window.addEventListener("scroll", function () {
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 });
+function getUniqueClasses() {
+  // Create a Set to store unique classes
+  const uniqueClasses = new Set();
+
+  // Get all elements in the document
+  const allElements = document.querySelectorAll("*");
+
+  // Iterate over each element
+  allElements.forEach((element) => {
+    // Get the class list of the current element
+    const classList = element.classList;
+
+    // Add each class to the Set (duplicates are automatically handled)
+    classList.forEach((className) => {
+      uniqueClasses.add(className);
+    });
+  });
+
+  // Convert the Set to an Array and return it
+  return Array.from(uniqueClasses);
+}
+
+// Usage example
+const uniqueClasses = getUniqueClasses();
+console.log(uniqueClasses);
